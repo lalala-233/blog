@@ -109,5 +109,5 @@ deploy:
 backup:
     type: git
     repository:
-       github: https://github.com/lalala-233/lalala-233.github.io.git,hexo
-       coding: https://github.com/lalala-233/lalala-233.github.io.git,hexo
+       github: git@github.com:lalala-233/lalala-233.github.io.git,hexo
+       coding: git@github.com:lalala-233/lalala-233.github.io.git,hexo
