@@ -105,3 +105,9 @@ deploy:
   type: git
   repo: https://github.com/lalala-233/lalala-233.github.io.git
   branch: main
+  
+backup:
+    type: git
+    repository:
+       github: https://github.com/lalala-233/lalala-233.github.io.git,hexo
+       coding: https://github.com/lalala-233/lalala-233.github.io.git,hexo
