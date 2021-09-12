@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -62,7 +62,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 0
   order_by: -date
 
 # Category & Tag
@@ -107,7 +107,16 @@ deploy:
   branch: main
   
 backup:
-    type: git
-    repository:
-       github: git@github.com:lalala-233/lalala-233.github.io.git,hexo
-       coding: git@github.com:lalala-233/lalala-233.github.io.git,hexo
+  type: git
+  repository:
+    github: git@github.com:lalala-233/lalala-233.github.io.git,hexo
+    coding: git@github.com:lalala-233/lalala-233.github.io.git,hexo
+symbols_count_time:
+  symbols: true                # 文章字数统计
+  time: true                   # 文章阅读时长
+  total_symbols: true          # 站点总字数统计
+  total_time: true             # 站点总阅读时长
+  exclude_codeblock: true     # 排除代码字数统计
+
+
+
