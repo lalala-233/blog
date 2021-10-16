@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: lalala 的网站
-subtitle: '猜猜我是谁？'
-description: '这个网站里啥也没有。'
-keywords:
+title: lalala 的博客
+subtitle: '这只是一个简单的博客'
+description: '这只是一个电脑软件爱好者的博客，没什么好看的。'
+keywords: 
 author: lalala
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://lalala-233.github.io
+url: https://lalala-233.github.io/blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -61,7 +61,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: 'blog'
   per_page: 0
   order_by: -date
 
@@ -103,14 +103,10 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/lalala-233/lalala-233.github.io.git
-  branch: main
+  repo: https://github.com/lalala-233/blog.git
+  branch: hexo
   
-backup:
-  type: git
-  repository:
-    github: git@github.com:lalala-233/lalala-233.github.io.git,hexo
-    coding: git@github.com:lalala-233/lalala-233.github.io.git,hexo
+
 symbols_count_time:
   symbols: true                # 文章字数统计
   time: true                   # 文章阅读时长
