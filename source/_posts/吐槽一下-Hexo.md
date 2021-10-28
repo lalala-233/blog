@@ -5,6 +5,7 @@ tags:
 categories:
 - Author
 - lalala
+top: 1
 ---
 
 &emsp;&emsp;偶然发现了 `Hexo` 有草稿功能，感觉比较实用，便创建了许多草稿，想保留一下创建日期，暗示开始时间。
@@ -19,3 +20,17 @@ categories:
 ---
 
 &emsp;&emsp;我用 `Git` 文件的时候把 `.gitignore` 所有内容清空了，但有一些好像是不需要的。算了懒得弄，不管了。
+
+---
+
+&emsp;&emsp;继续吐槽一下。
+&emsp;&emsp;我一直以为图片链接有问题，后来才发现，主页的图片链接确实有问题，但是点进去后图片可以加载出来。
+&emsp;&emsp;如果点进去后图片还没有加载出来，说明你连不到服务器的网，可以打开 `hosts` 文件，添加一句：
+
+```
+185.199.108.133 raw.githubusercontent.com
+```
+
+&emsp;&emsp;然后刷新网页试试。
+&emsp;&emsp;怎么打开 `hosts` 文件可以上网搜索。
+
