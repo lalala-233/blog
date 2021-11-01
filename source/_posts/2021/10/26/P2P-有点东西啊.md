@@ -3,8 +3,7 @@ title: P2P 有点东西啊
 date: 2021-10-26 22:07:33
 tags:
 categories:
-- Author
-- lalala
+- [Author, lalala]
 ---
 
 &emsp;&emsp;我好像把博客当做日记写了……
