@@ -5,6 +5,7 @@ tags:
 - Hexo
 categories:
 - [Author, lalala]
+- [未分类, 吐槽]
 top: 1
 ---
 
@@ -34,3 +35,8 @@ top: 1
 &emsp;&emsp;然后刷新网页试试。
 &emsp;&emsp;怎么打开 `hosts` 文件可以上网搜索。
 
+---
+
+&emsp;&emsp;继续吐槽：`Hexo` 对 `Markdown` 语法的支持好奇怪啊。
+&emsp;&emsp;不过好像很多 `Markdown` 编辑器对 `Markdown` 语法的支持都不一样。
+&emsp;&emsp;哦，那没事了。

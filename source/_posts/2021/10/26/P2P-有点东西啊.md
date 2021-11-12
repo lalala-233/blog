@@ -4,6 +4,7 @@ date: 2021-10-26 22:07:33
 tags:
 categories:
 - [Author, lalala]
+- [日常, 电脑]
 ---
 
 &emsp;&emsp;我好像把博客当做日记写了……
