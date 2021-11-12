@@ -20,16 +20,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lalala-233.github.io","root":"/blog/","images":"/blog/images","scheme":"Muse","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/blog/js/config.js"></script>
-<meta name="description" content="这只是一个电脑软件爱好者的博客，没什么好看的。">
+<meta name="description" content="&amp;emsp;&amp;emsp;我居然鸽了这么久，还不小心发出了空白的页面……  &amp;emsp;&amp;emsp;突发奇想，想做个根据指定指令做出回应的程序。&amp;emsp;&amp;emsp;其中一项便是返回错误。&amp;emsp;&amp;emsp;当时的思路是：当字符数组的长度达到一定长度时，清空数组并返回 Error。&amp;emsp;&amp;emsp;上网搜了一些资料，写出来了。&amp;emsp;&amp;emsp;本人是初学者，代码中写的不好的地方麻烦">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ 字符串和字符数组的长度">
 <meta property="og:url" content="https://lalala-233.github.io/blog/2021/10/31/C-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84%E7%9A%84%E9%95%BF%E5%BA%A6/index.html">
 <meta property="og:site_name" content="lalala 的博客">
-<meta property="og:description" content="这只是一个电脑软件爱好者的博客，没什么好看的。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;我居然鸽了这么久，还不小心发出了空白的页面……  &amp;emsp;&amp;emsp;突发奇想，想做个根据指定指令做出回应的程序。&amp;emsp;&amp;emsp;其中一项便是返回错误。&amp;emsp;&amp;emsp;当时的思路是：当字符数组的长度达到一定长度时，清空数组并返回 Error。&amp;emsp;&amp;emsp;上网搜了一些资料，写出来了。&amp;emsp;&amp;emsp;本人是初学者，代码中写的不好的地方麻烦">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-31T05:37:00.000Z">
-<meta property="article:modified_time" content="2021-11-01T13:37:35.619Z">
+<meta property="article:modified_time" content="2021-11-12T13:00:48.675Z">
 <meta property="article:author" content="lalala">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
 
@@ -132,13 +133,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/blog/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/blog/categories/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -214,8 +215,29 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-01 21:37:35" itemprop="dateModified" datetime="2021-11-01T21:37:35+08:00">2021-11-01</time>
+        <time title="修改时间：2021-11-12 21:00:48" itemprop="dateModified" datetime="2021-11-12T21:00:48+08:00">2021-11-12</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/blog/categories/Author/" itemprop="url" rel="index"><span itemprop="name">Author</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/blog/categories/Author/%E8%AF%A5%E5%90%8D%E5%AD%97%E8%A2%AB%E5%92%8C%E8%B0%90%E4%BA%86/" itemprop="url" rel="index"><span itemprop="name">该名字被和谐了</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/blog/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/blog/categories/%E7%BC%96%E7%A8%8B/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -224,7 +246,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>485</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -242,7 +264,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <p>&emsp;&emsp;我居然鸽了这么久，还不小心发出了空白的页面……</p>
+<hr>
+<p>&emsp;&emsp;突发奇想，想做个根据指定指令做出回应的程序。<br>&emsp;&emsp;其中一项便是返回错误。<br>&emsp;&emsp;当时的思路是：当字符数组的长度达到一定长度时，清空数组并返回 Error。<br>&emsp;&emsp;上网搜了一些资料，写出来了。<br>&emsp;&emsp;本人是初学者，代码中写的不好的地方麻烦指出，谢谢。（邮箱：<a href="mailto:&#50;&#x33;&#49;&#55;&#57;&#56;&#x37;&#x32;&#55;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#50;&#x33;&#49;&#55;&#57;&#56;&#x37;&#x32;&#55;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a>）<br>&emsp;&emsp;代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用字符数组。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">short</span> Length = <span class="number">0</span>;    <span class="comment">//字符串长度。</span></span><br><span class="line">	<span class="keyword">short</span> Sizeof;        <span class="comment">//字符串大小。</span></span><br><span class="line">	<span class="keyword">short</span> MLength = <span class="number">0</span>;   <span class="comment">//规定输入的最大长度。</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Please enter the maximum length of the char[]: &quot;</span>;</span><br><span class="line">	cin &gt;&gt; MLength;</span><br><span class="line">	<span class="keyword">char</span> Input[MLength] = &#123;&#125;;   <span class="comment">//输入。</span></span><br><span class="line">	<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">		Length = <span class="built_in">strlen</span>(Input);</span><br><span class="line">		Sizeof = <span class="built_in"><span class="keyword">sizeof</span></span>(Input);</span><br><span class="line">		<span class="keyword">if</span> ( Length &gt; MLength )</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">strcpy</span>(Input, <span class="string">&quot;Error!&quot;</span>);   <span class="comment">//重置信息。</span></span><br><span class="line">		&#125;</span><br><span class="line">		cout</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Input is: &quot;</span> &lt;&lt; Input &lt;&lt; endl</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Length is: &quot;</span> &lt;&lt; Length &lt;&lt; endl</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Sizeof is: &quot;</span> &lt;&lt; Sizeof &lt;&lt; endl</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Please enter the value of char[]: &quot;</span>;   <span class="comment">//输出信息。</span></span><br><span class="line">		cin &gt;&gt; Input;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;还有一种：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用字符串。</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">short</span> Length = <span class="number">0</span>;    <span class="comment">//Length2 =字符串长度。</span></span><br><span class="line">	<span class="keyword">short</span> Sizeof;        <span class="comment">//字符串大小。</span></span><br><span class="line">	<span class="keyword">short</span> MLength = <span class="number">0</span>;   <span class="comment">//规定输入的最大长度。</span></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Please enter the maximum length of the string: &quot;</span>;</span><br><span class="line">	cin &gt;&gt; MLength;</span><br><span class="line">	string Input;        <span class="comment">//输入。</span></span><br><span class="line">	<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">		Length = Input.<span class="built_in">size</span>();</span><br><span class="line">		Sizeof = <span class="built_in"><span class="keyword">sizeof</span></span>(Input);</span><br><span class="line">		<span class="keyword">if</span> ( Length &gt; MLength )</span><br><span class="line">		&#123;</span><br><span class="line">			Input = <span class="string">&quot;Error!&quot;</span>;   <span class="comment">//重置信息。</span></span><br><span class="line">		&#125;</span><br><span class="line">		cout</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Input is: &quot;</span> &lt;&lt; Input &lt;&lt; endl</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Length is: &quot;</span> &lt;&lt; Length &lt;&lt; endl</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Sizeof is: &quot;</span> &lt;&lt; Sizeof &lt;&lt; endl</span><br><span class="line">		&lt;&lt; <span class="string">&quot;Please enter the value of string: &quot;</span>;   <span class="comment">//输出信息。</span></span><br><span class="line">		cin &gt;&gt; Input;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;简单来说就是无限循环，每循环一次就清空一次控制台信息，并自动获取代码的长度和大小并输出。<br>&emsp;&emsp;这也算是间接的学了学 “sizeof()”、”.size()”、”strlen” 等关键字的用法吧。<br>&emsp;&emsp;所有代码均在「Win7 64 位」成功运行。</p>
+
     </div>
 
     
@@ -250,6 +279,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/C/" rel="tag"># C++</a>
+          </div>
 
         
 
@@ -260,6 +292,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/blog/2021/11/12/%E6%B5%8B%E8%AF%95/" rel="next" title="测试">
+                  测试 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -291,13 +326,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">7k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">7 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
